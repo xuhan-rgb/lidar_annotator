@@ -1,0 +1,22 @@
+{
+  "sam3.pt": {
+    "repo_id": "facebook/sam3",
+    "revision": "3c879f39826c281e95690f02c7821c4de09afae7",
+    "filename": "sam3.pt",
+    "homepage": "https://huggingface.co/facebook/sam3",
+    "access": "Request access on the model page, then run hf auth login or set HF_TOKEN."
+  },
+  "wilddet3d.pt": {
+    "repo_id": "allenai/WildDet3D",
+    "revision": "161edb26239f58d8973045517d9c8b179c515f73",
+    "filename": "wilddet3d_alldata_all_prompt_v1.0.pt",
+    "homepage": "https://huggingface.co/allenai/WildDet3D"
+  },
+  "yolo26x.pt": {
+    "repository": "https://github.com/ultralytics/assets",
+    "commit": "dcececebff9fe00420c144baa5cd25a641d10aa6",
+    "release": "v8.4.0",
+    "url": "https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26x.pt",
+    "homepage": "https://docs.ultralytics.com/models/yolo26/"
+  }
+}

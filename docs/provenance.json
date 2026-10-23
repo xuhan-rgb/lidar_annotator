@@ -1,0 +1,185 @@
+{
+  "origin": "Extracted annotation modules; original hashes retained for migration auditing, not runtime imports",
+  "files": [
+    {
+      "file": "tools/autolabel/wilddet3d_zgc/process_vehicle_camera_ray_distance.py",
+      "original_sha256": "5e75ba99b7bc1324dc1b9a43b0b56b0b1dbcc5f1b4cceadc2d8f09c9721a43b3"
+    },
+    {
+      "file": "tools/autolabel/wilddet3d_zgc/label_geometry.py",
+      "original_sha256": "6cc19d5de2d15eb57e9bf78fb797ed973947b74ebf73668e60255f06398b8fe2"
+    },
+    {
+      "file": "tools/autolabel/wilddet3d_zgc/review_bev_pose.py",
+      "original_sha256": "68b52a018485cd1670499fa66b66ed9ffddcbe148d7b835af1c940e9359a1f5f"
+    },
+    {
+      "file": "tools/autolabel/wilddet3d_zgc/center_distance_selection.py",
+      "original_sha256": "b18881428ca12a5132c528985005adaa58d0019ff033f34e5cf8e965c4daea55"
+    },
+    {
+      "file": "tools/autolabel/wilddet3d_zgc/refine_instance_support.py",
+      "original_sha256": "2cd7367db1621c8f1523b41766e83940130c8ba15dd00f02699ae3cd1bf52727"
+    },
+    {
+      "file": "tools/autolabel/wilddet3d_zgc/refine_mask_depth_000372.py",
+      "original_sha256": "5903f1e7a56d0278da255d46ce5edabdb064b59b15fff86222b63810ebe28ed4"
+    },
+    {
+      "file": "tools/autolabel/wilddet3d_zgc/instance_label_config.py",
+      "original_sha256": "ddb7cb29a0877a546789bda83f67a689227b0d67702fca7effc939af026b19ed"
+    },
+    {
+      "file": "tools/autolabel/wilddet3d_zgc/verify_vehicle_class_000402.py",
+      "original_sha256": "fd58b6a6362a4626c4f8a6994bf7fafac98532031a0cc3a2362008d7e3141378"
+    },
+    {
+      "file": "tools/autolabel/wilddet3d_zgc/associate_instance_masks.py",
+      "original_sha256": "cd30304a355d81f5017629decae4b74cae7d1bb30a512d8fcd4e9e4609ed3d39"
+    },
+    {
+      "file": "tools/autolabel/wilddet3d_zgc/generate_vehicle_camera_ray_distance030_batch.py",
+      "original_sha256": "b1c57b41542f27bfd8e9052adb618a4ce8f5f33908c4289a4a2108a2d2c31bcf"
+    },
+    {
+      "file": "tools/autolabel/pedestrian_instance_zgc/validate_all.py",
+      "original_sha256": "690ca44cc8b60ac2981dad825681e2bb3164cfb9204c70fb3d122ad6bc139d2a"
+    },
+    {
+      "file": "tools/autolabel/pedestrian_instance_zgc/geometry.py",
+      "original_sha256": "ca10c617a18d9ddc6ceaa337a9e047b9fc0fd66ed381ff9c7ecb35d9ab253c1f"
+    },
+    {
+      "file": "tools/autolabel/pedestrian_instance_zgc/config.py",
+      "original_sha256": "5b2bd8272271a85cfcb081a7fe4e7dfec97661a9282b3576a99312d54466af82"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/test_sam3_video_memory.py",
+      "original_sha256": "0ef1a230d361748cbdec7a35f73eeba65e09b1e74c58b74241ccfc02271aad16"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/run_sam3_full_video.py",
+      "original_sha256": "9a2e7d7c4aeb6fc1a47da9e696f5cebcf350ff68543f37c1469430b3dfe6b118"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/test_render_combined.py",
+      "original_sha256": "ff5ad0b3e682aaeddab2a344a1baef48fe8a38d98de49b16133e23197ebaef5b"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/render_combined.py",
+      "original_sha256": "a81ee8f317216d67168fcfbd8dfc19e393060da5e3a319b42907bb8b61d8b93d"
+    },
+    {
+      "file": "tools/autolabel/wilddet3d_zgc/projection_clipping.py",
+      "original_sha256": "8d8d57e49204fc8b7b3f2a8c6bb5a466b1b6dacd9e8b13a9d48fba4c4ee3ed67"
+    },
+    {
+      "file": "tools/autolabel/pedestrian_instance_zgc/render_outputs.py",
+      "original_sha256": "2d14cded9b3af5728aed9630d9a9cc3a488acb5e1ec8a778567e6d8471f45c53"
+    },
+    {
+      "file": "tools/autolabel/pedestrian_instance_zgc/process_instances.py",
+      "original_sha256": "9a4855eab5857369822ce358594f788f861432b92365a5a09c145bbd95bc223e"
+    },
+    {
+      "file": "tools/autolabel/pedestrian_instance_zgc/association.py",
+      "original_sha256": "d86662d4137efda8287917b7ec208ce59548d8c3fd050f786118e33709c840a2"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/test_odom_local_vehicle.py",
+      "original_sha256": "3bcf83f0610be48b6d71f1a026ddb9766d40dba5fa41e4d0accec042c5da42af"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/prepare_recorded_odom.py",
+      "original_sha256": "82a4d159a1c19895d08690b15bd506b9795165c4581371d42a4a50a1efd747a6"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/temporal_refine.py",
+      "original_sha256": "dff1494d61bac6c0f60d5d5c1f0eb057b2111d1afe17484c348a762bab3ffeb1"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/odom_local_vehicle.py",
+      "original_sha256": "e51c6f244003dd934ad1fb954aa8742c093c5a80f2802fcb6e1d37910176f24e"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/anchor_vehicle_refine.py",
+      "original_sha256": "54345282ceb0eceb97a1b54440f9cad6fa78760e9e970f22342c56f127da9fac"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/test_anchor_vehicle_refine.py",
+      "original_sha256": "208909d2e0f96cdc84ce5db178be57a688e53e4be802be07a3a65c0319470a62"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/test_vehicle_map_dedup.py",
+      "original_sha256": "bd6de3ea8623e4caf85b1b31a67c2a917c311a095d5bd1688369f28b73bbec42"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/deduplicate_vehicle_map.py",
+      "original_sha256": "77a90f2176086fd1c3c7508be1a772657e449fc9cfe5f9db26516f77a3dc41ed"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/test_fit_vehicle_map.py",
+      "original_sha256": "f38ecd1e09481731bdd3a1239dbece7303410a97354b212c04119e93e87757b0"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/fit_vehicle_map.py",
+      "original_sha256": "1223fc9bc7c19a901b430e0dce4fad0238865e010aedf2fbf06033ecd004c1c8"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/test_person_mask_interior.py",
+      "original_sha256": "af2e334ccca2dfb43fd563f545d5ae9ee84bca6898c5083f019a3777a9a69907"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/person_mask_interior.py",
+      "original_sha256": "7849a5b371ad3854a196965d18112d3c257b676ff4355f7dc361f09023a79c60"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/test_person_linear_recovery.py",
+      "original_sha256": "ff9d6478c6b5833f40dc6968998855bcc90823172c1ba428491e975c2b4055ea"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/person_linear_recovery.py",
+      "original_sha256": "a5944a6fe707c4942a8615e93de34fd91f8219a38de9011ccf9a2aded127e98f"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/test_person_track_reference.py",
+      "original_sha256": "0c1ce463b68cd913d1fef40f768d8ff17a6c3e05b641209b104f440cbd94de65"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/person_track_reference.py",
+      "original_sha256": "a5e37f621e558b4500fe59b87eea84cd6e28daf5a42a1e05e4074dd7d3c61024"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/render_consistent_combined.py",
+      "original_sha256": "14b408f557543e9dafd1737c5e28645c0d66dffdcd6c584f255d05a4ee7c748a"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/render_temporal.py",
+      "original_sha256": "d5df391e8206c3dcd844f5eb26eb2178231e8365a6d2d2fc09850b433d10be3d"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/audit_person_consistent_tracks.py",
+      "original_sha256": "35edbe5fd968d0d7b18a58be264bf1a4ec976bcc288074a862fc3f762f312fe8"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/run_person_consistent_tracks.py",
+      "original_sha256": "6cdfa84415c0197b9a5d410a820f75b2cf083e27bb8636fbd54af5e5c7222a03"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/visualize_person_trajectories.py",
+      "original_sha256": "81071ba3e6fe4dff82bd61a0f9263ea655bb507850df83cd0d8beb51ff4d7e52"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/visualize_vehicle_map.py",
+      "original_sha256": "746c6b3f59798596194bfc0d52157172606db1fcad5b383fb7bb2be3536201d1"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/prepare_person_observations.py",
+      "original_sha256": "37f050a1229d1102db291c9e6aec7ac29ac18970c11b2a310ed8423c3f5dfcd7"
+    },
+    {
+      "file": "tools/autolabel/zgc_labeling/pipeline.py",
+      "original_sha256": "06ca69e68a50317c0b08ad9c323f1781a2297696c178cc694b78f094f045773b"
+    }
+  ]
+}

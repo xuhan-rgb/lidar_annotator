@@ -1,0 +1,22 @@
+.venv*/
+__pycache__/
+*.pyc
+outputs/
+.pytest_cache/
+/dist/
+/data/
+/runtime
+/lidar_annotator/
+/models/*.pt
+/models/*.pth
+/models/*.safetensors
+/models/*.downloading
+/models/.download.lock
+/configs/user_recipe.json
+/configs/paths.local.json
+# Local storage entry points are symlinks; do not commit workstation paths.
+/outputs
+/testdata
+/examples
+/experiments
+/verification

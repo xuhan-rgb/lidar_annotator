@@ -1,0 +1,334 @@
+{
+  "recipe_id": "zgc_sam3_mask_v1",
+  "created": "2026-10-13",
+  "approved_final_version": "/mnt/data/02-Datasets/sam3_zgc_roof_union_20261013",
+  "model": {
+    "checkpoint": "/home/qwer/.cache/lidar_annotator/models/sam3.pt",
+    "sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+    "instance_candidate_threshold": 0.25,
+    "mask_threshold": 0.5,
+    "inference_autocast": "cuda bfloat16"
+  },
+  "base_semantics": {
+    "prompts": {
+      "0": [
+        "road",
+        "sidewalk"
+      ],
+      "1": [
+        "person"
+      ],
+      "2": [
+        "car",
+        "van",
+        "truck"
+      ],
+      "3": [
+        "building",
+        "wall",
+        "shed"
+      ],
+      "4": [
+        "tree canopy",
+        "tree crown",
+        "leaves in tree canopy"
+      ],
+      "5": [
+        "metal fence",
+        "guardrail",
+        "hedge",
+        "hedgerow",
+        "trimmed hedge",
+        "dense row of bushes",
+        "shrub hedge",
+        "bush",
+        "shrub"
+      ],
+      "6": [
+        "tree trunk"
+      ],
+      "7": [
+        "utility pole",
+        "street light pole",
+        "metal pole",
+        "concrete pillar",
+        "vertical support post",
+        "overhead power line",
+        "electric cable"
+      ]
+    },
+    "score_threshold": 0.25,
+    "mask_threshold": 0.5,
+    "excluded_prompts": [
+      "curb",
+      "low wall",
+      "road barrier"
+    ],
+    "model_input": [
+      1008,
+      1008
+    ],
+    "teacher_to_occupancy": [
+      0,
+      1,
+      2,
+      5,
+      4,
+      6,
+      3,
+      3
+    ],
+    "conflict_rules": [
+      "person/vehicle override only for matching old actor label or instance score >= .7",
+      "building/fence disagreement with previous labels is ignored",
+      "existing trunk mask retained only inside new foliage/trunk predictions",
+      "new fence overrides foliage; trunk overrides foliage; other classes compete by score"
+    ],
+    "supervision_policy": "static_drivable_occupancy_v1",
+    "weight": "/mnt/data/02-Datasets/autolabel/third_party/repos/sam3/sam3.pt",
+    "weight_sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+    "manual_ground_truth": false,
+    "grass_prompts": [
+      "grass lawn",
+      "grass-covered ground"
+    ],
+    "grass_rule": "grass ground wins against foliage/fence only when grass evidence is at least as strong; preserve actors/building/trunk",
+    "grass_drivable": true,
+    "teacher_class_7": "pole, pillar, overhead wire; separate image class mapped to occupancy other obstacle"
+  },
+  "ground_objects": {
+    "prompt": "object on the ground",
+    "minimum_instance_score": 0.4,
+    "replacement_classes": [
+      0,
+      255
+    ],
+    "output_class": 8
+  },
+  "ground_refinement": {
+    "prompts": [
+      "paved ground",
+      "pavement",
+      "asphalt road",
+      "parking lot pavement"
+    ],
+    "minimum_instance_score": 0.5,
+    "minimum_pixel_prompt_support": 2,
+    "replacement_classes": [
+      0,
+      255
+    ]
+  },
+  "manhole_covers": {
+    "prompt": "manhole cover",
+    "minimum_instance_score": 0.7,
+    "replacement_classes": [
+      0,
+      8,
+      255
+    ],
+    "output_class": 0
+  },
+  "small_debris": {
+    "prompt": "small debris on the ground",
+    "minimum_instance_score": 0.45,
+    "existing_object_class": 8,
+    "minimum_connected_component_overlap": 0.5,
+    "output_class": 0,
+    "physical_height_threshold_m": null
+  },
+  "roof_union": {
+    "roof_prompt": "roof",
+    "roof_threshold": 0.4,
+    "canopy_prompts": [
+      "overhanging roof",
+      "metal canopy",
+      "overhead metal canopy"
+    ],
+    "canopy_threshold": 0.65,
+    "minimum_canopy_pixel_support": 2,
+    "replacement_class": 3,
+    "preserve_previous_roof": true,
+    "output_class": 9,
+    "rule": "building intersect (roof OR pixel agreement of at least two canopy prompts)"
+  },
+  "raw_classes": [
+    {
+      "id": 0,
+      "name": "ground",
+      "rgb": [
+        55,
+        190,
+        65
+      ]
+    },
+    {
+      "id": 1,
+      "name": "person",
+      "rgb": [
+        0,
+        255,
+        255
+      ]
+    },
+    {
+      "id": 2,
+      "name": "vehicle",
+      "rgb": [
+        255,
+        220,
+        0
+      ]
+    },
+    {
+      "id": 3,
+      "name": "building",
+      "rgb": [
+        65,
+        135,
+        240
+      ]
+    },
+    {
+      "id": 4,
+      "name": "foliage",
+      "rgb": [
+        160,
+        105,
+        225
+      ]
+    },
+    {
+      "id": 5,
+      "name": "fence",
+      "rgb": [
+        255,
+        115,
+        15
+      ]
+    },
+    {
+      "id": 6,
+      "name": "tree trunk",
+      "rgb": [
+        245,
+        65,
+        60
+      ]
+    },
+    {
+      "id": 7,
+      "name": "pole / wire",
+      "rgb": [
+        255,
+        80,
+        160
+      ]
+    },
+    {
+      "id": 8,
+      "name": "ground object",
+      "rgb": [
+        245,
+        65,
+        60
+      ]
+    },
+    {
+      "id": 9,
+      "name": "roof / eaves",
+      "rgb": [
+        160,
+        105,
+        225
+      ]
+    }
+  ],
+  "raw_to_training_image": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    6,
+    6,
+    4
+  ],
+  "raw_to_occupancy": [
+    0,
+    1,
+    2,
+    5,
+    4,
+    6,
+    3,
+    3,
+    3,
+    4
+  ],
+  "unknown_class": 255,
+  "visualization": {
+    "person_rgb": [
+      0,
+      255,
+      255
+    ],
+    "pole_wire_rgb": [
+      255,
+      80,
+      160
+    ],
+    "mask_alpha": 0.55,
+    "original_weight": 0.45,
+    "xy_range_m": [
+      -20,
+      -20,
+      20,
+      20
+    ],
+    "stored_bev_shape": [
+      320,
+      320
+    ],
+    "display_bev_shape": [
+      160,
+      160
+    ],
+    "grid_resolution_m": 0.25,
+    "jpeg_quality": 70,
+    "layout": "2x2: original | image mask / point projection | BEV"
+  },
+  "training_roi": [
+    -20,
+    -20,
+    -3,
+    20,
+    20,
+    6
+  ],
+  "input_frame_count": 971,
+  "historical_stages": [
+    {
+      "stage": "01_base_semantics",
+      "source": "/mnt/data/02-Datasets/sam3_zgc_hedge_poles_20261011"
+    },
+    {
+      "stage": "02_ground_objects",
+      "source": "/mnt/data/02-Datasets/sam3_zgc_ground_objects_20261013"
+    },
+    {
+      "stage": "03_ground_covers_debris",
+      "source": "/mnt/data/02-Datasets/sam3_zgc_refined_20261013"
+    },
+    {
+      "stage": "04_roof_only",
+      "source": "/mnt/data/02-Datasets/sam3_zgc_building_roof_20261013"
+    },
+    {
+      "stage": "05_roof_canopy_union",
+      "source": "/mnt/data/02-Datasets/sam3_zgc_roof_union_20261013"
+    }
+  ]
+}

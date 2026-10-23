@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=LiDAR Annotator
+Comment=LiDAR semantic and instance annotation workflow
+Exec=@EXEC_RUN_SH@ gui
+Icon=@ICON_PATH@
+Terminal=false
+Categories=Graphics;
+StartupNotify=true

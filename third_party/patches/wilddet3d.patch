@@ -1,0 +1,28 @@
+--- a/wilddet3d/inference.py
++++ b/wilddet3d/inference.py
+@@ -653,9 +653,16 @@
+ 
+         @classmethod
+         def _from_pretrained_config_only(cls, path, **kwargs):
++            import json
++            import os
+             from pathlib import Path as P
+ 
+             from huggingface_hub import hf_hub_download
++
++            config_path = os.environ.get("WILDDET3D_LINGBOT_CONFIG")
++            if config_path:
++                with open(config_path) as config_file:
++                    return cls(**json.load(config_file))
+ 
+             if P(path).exists():
+                 cp = path
+@@ -766,7 +773,7 @@
+         )
+         new_state_dict[new_key] = v
+ 
+-    wilddet3d.load_state_dict(new_state_dict, strict=False)
++    wilddet3d.load_state_dict(new_state_dict, strict=True)
+     wilddet3d = wilddet3d.to(device)
+     wilddet3d.eval()
+ 

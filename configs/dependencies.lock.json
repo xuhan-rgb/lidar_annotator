@@ -1,0 +1,170 @@
+{
+  "schema": "lidar_remote_dependencies_v1",
+  "sources": [
+    {
+      "name": "sam3",
+      "repository": "https://github.com/facebookresearch/sam3",
+      "commit": "f6e51f59500a87c576c2df2323ce56b9fd7a12de",
+      "url": "https://codeload.github.com/facebookresearch/sam3/tar.gz/f6e51f59500a87c576c2df2323ce56b9fd7a12de",
+      "sha256": "b23282bdabcd3274e6bee5ddb719751658be5a49dafe2bd2353052d12789ef26",
+      "target": "sam3",
+      "include": [
+        "sam3",
+        "LICENSE",
+        "README.md",
+        "pyproject.toml"
+      ],
+      "patches": [
+        {
+          "file": "third_party/patches/sam3.patch",
+          "sha256": "6a24f6563136facdaf82b3206d6c425eebac63a3430b0db1c6985a299ab690b9",
+          "files": [
+            {
+              "file": "sam3/model/io_utils.py",
+              "upstream_sha256": "b57c8640600923005683dde2a6251b936bbced3163733b5bbe832db80335661c",
+              "patched_sha256": "3d4396e93dc42bb47dac763deed2e28f275f1d9caf541b8ff7e1bd8a9957c770"
+            },
+            {
+              "file": "sam3/model/sam3_video_inference.py",
+              "upstream_sha256": "e26ec75b690f2abaea0278940320c6bb040c1c695d25cf3b34bbd71b1a6d819c",
+              "patched_sha256": "2458fbd70d568e7b7da8212f7f7b390ea90fc7e1c698b5f35cc451746c768d7b"
+            },
+            {
+              "file": "sam3/model/sam3_video_predictor.py",
+              "upstream_sha256": "01a4d38b43484c2a8dd208abadaede47182637d553beb05861f9651abdc0a789",
+              "patched_sha256": "f9a613d74b337f0d6c76ee39cbb0909c4e7a05cfede288d6fd4297f63414062d"
+            },
+            {
+              "file": "sam3/train/data/sam3_image_dataset.py",
+              "upstream_sha256": "54eb5f1fe880c2e37e0b37b4249c354b82fcf76ab73e112ff8ef0bffa654a79c",
+              "patched_sha256": "e3a8aee01c9e109bd4dc1abe05c3d2ac90eb945a439d74cfc32266aaeceb764c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "wilddet3d",
+      "repository": "https://github.com/allenai/WildDet3D",
+      "commit": "1b8aa52b6ff3f00d0ebfa07175efc0c0c440964a",
+      "url": "https://codeload.github.com/allenai/WildDet3D/tar.gz/1b8aa52b6ff3f00d0ebfa07175efc0c0c440964a",
+      "sha256": "95b87064e8cede650602d6c7065a0e56b8b79561abab15300ce1961377038072",
+      "target": "wilddet3d",
+      "include": [
+        "wilddet3d",
+        "LICENSE",
+        "README.md"
+      ],
+      "patches": [
+        {
+          "file": "third_party/patches/wilddet3d.patch",
+          "sha256": "46b4d7354222272c8e44ddc4a1c1526b6183e92a222db0c2661dbeb535be238f",
+          "files": [
+            {
+              "file": "wilddet3d/inference.py",
+              "upstream_sha256": "c44ca200ebd1412036e93fb3a4c08a5e0b8b768b17093cb7eba550eb28dc06d4",
+              "patched_sha256": "5468e0210588a4b0d86021f8a73d1e282d8ea7e65405dae2f6fa09643253339a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "wild_sam",
+      "repository": "https://github.com/weikaih04/sam3_for_wilddet3d",
+      "commit": "159490bb13108749dd5ceff68f42cd1792e60641",
+      "url": "https://codeload.github.com/weikaih04/sam3_for_wilddet3d/tar.gz/159490bb13108749dd5ceff68f42cd1792e60641",
+      "sha256": "547f82b726968ee4c4f098f4e62da0a6b8ca0ec3a3eb7c884260fc1961ad40fb",
+      "target": "wilddet3d/third_party/sam3",
+      "include": [
+        "sam3",
+        "LICENSE",
+        "README.md",
+        "pyproject.toml"
+      ]
+    },
+    {
+      "name": "lingbot",
+      "repository": "https://github.com/Robbyant/lingbot-depth",
+      "commit": "ff29de5bf433d1b1519cd851da00bc652668964a",
+      "url": "https://codeload.github.com/Robbyant/lingbot-depth/tar.gz/ff29de5bf433d1b1519cd851da00bc652668964a",
+      "sha256": "1a581fec1929ac8396794c6314362d36e2533fa7caa6de8e8a20bc3affc45c2c",
+      "target": "wilddet3d/third_party/lingbot_depth",
+      "include": [
+        "mdm",
+        "LICENSE",
+        "README.md"
+      ]
+    },
+    {
+      "name": "utils3d",
+      "repository": "https://github.com/EasternJournalist/utils3d",
+      "commit": "83bfa5bda008803f6521ce9547f94023b8afeddd",
+      "url": "https://codeload.github.com/EasternJournalist/utils3d/tar.gz/83bfa5bda008803f6521ce9547f94023b8afeddd",
+      "sha256": "b0f1dc8daa595fcdd1f0a2122ef86e15155eaac38240cb71f9bd7d30f20b4dea",
+      "target": "wilddet3d/third_party/utils3d",
+      "include": [
+        "utils3d",
+        "LICENSE",
+        "README.md",
+        "pyproject.toml"
+      ]
+    },
+    {
+      "name": "vis4d",
+      "repository": "https://github.com/SysCV/vis4d",
+      "commit": "9cd052ed72a208773abc1f6f0cd9109d8ec97531",
+      "url": "https://codeload.github.com/SysCV/vis4d/tar.gz/9cd052ed72a208773abc1f6f0cd9109d8ec97531",
+      "sha256": "47b2a9f207e35747a7e1b8cfdac8e67d44f6529469a5b556197e64a34fd0cf1f",
+      "target": "vis4d",
+      "include": [
+        "vis4d",
+        "LICENSE",
+        "README.md"
+      ]
+    },
+    {
+      "name": "msgpack",
+      "repository": "https://github.com/msgpack/msgpack-python",
+      "commit": "6129789e9f6ebccdb19b23c2cd1dc9551e57fc53",
+      "url": "https://codeload.github.com/msgpack/msgpack-python/tar.gz/6129789e9f6ebccdb19b23c2cd1dc9551e57fc53",
+      "sha256": "e33061702645e6bca2b171b5e25e06a78fac79f66b2db4de9a039e03d4567b10",
+      "target": "msgpack",
+      "include": [
+        "msgpack",
+        "COPYING",
+        "README.md"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "name": "NotoSansCJKsc-Regular.otf",
+      "repository": "https://github.com/notofonts/noto-cjk",
+      "commit": "f8d157532fbfaeda587e826d4cd5b21a49186f7c",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf",
+      "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+      "target": "fonts/NotoSansCJKsc-Regular.otf"
+    },
+    {
+      "name": "Noto-LICENSE.txt",
+      "repository": "https://github.com/notofonts/noto-cjk",
+      "commit": "f8d157532fbfaeda587e826d4cd5b21a49186f7c",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/Sans/LICENSE",
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+      "target": "fonts/Noto-LICENSE.txt"
+    },
+    {
+      "name": "DejaVuSans",
+      "repository": "https://github.com/dejavu-fonts/dejavu-fonts",
+      "commit": "0eda8a319c08835009849583cd090bb5b141ce25",
+      "release": "version_2_37",
+      "url": "https://github.com/dejavu-fonts/dejavu-fonts/releases/download/version_2_37/dejavu-fonts-ttf-2.37.tar.bz2",
+      "sha256": "fa9ca4d13871dd122f61258a80d01751d603b4d3ee14095d65453b4e846e17d7",
+      "members": {
+        "dejavu-fonts-ttf-2.37/ttf/DejaVuSans.ttf": "fonts/DejaVuSans.ttf",
+        "dejavu-fonts-ttf-2.37/LICENSE": "fonts/DejaVu-LICENSE.txt"
+      }
+    }
+  ]
+}

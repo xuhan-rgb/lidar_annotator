@@ -1,0 +1,17 @@
+{
+  "sam3.pt": {
+    "file": "sam3.pt",
+    "sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+    "bytes": 3450062241
+  },
+  "wilddet3d.pt": {
+    "file": "wilddet3d.pt",
+    "sha256": "f8b6a9e548f733ba62625a0d2adc4b0f4fdb6007ee11d9927f9c1027010fee57",
+    "bytes": 4733213037
+  },
+  "yolo26x.pt": {
+    "file": "yolo26x.pt",
+    "sha256": "9fdd44a31c504547ffb81d2c6d9e6dac3493c8eaa8b0398d3f43bae6c7003e92",
+    "bytes": 118667365
+  }
+}

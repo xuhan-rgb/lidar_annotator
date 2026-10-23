@@ -1,0 +1,124 @@
+{
+  "encoder": {
+    "backbone": "dinov2_vitl14",
+    "intermediate_layers": 1,
+    "dim_out": 1024,
+    "strict": false,
+    "depth_emb_mode": "conv_1c",
+    "img_depth_fuse_mode": "cat_token"
+  },
+  "neck": {
+    "dim_in": [
+      1026,
+      2,
+      2,
+      2,
+      2
+    ],
+    "dim_out": null,
+    "dim_res_blocks": [
+      1024,
+      256,
+      128,
+      64,
+      32
+    ],
+    "num_res_blocks": [
+      0,
+      2,
+      2,
+      2,
+      0
+    ],
+    "res_block_in_norm": "none",
+    "res_block_hidden_norm": "none",
+    "resamplers": [
+      "conv_transpose",
+      "conv_transpose",
+      "conv_transpose",
+      "bilinear"
+    ]
+  },
+  "depth_head": {
+    "dim_in": [
+      1024,
+      256,
+      128,
+      64,
+      32
+    ],
+    "dim_out": [
+      null,
+      null,
+      null,
+      null,
+      1
+    ],
+    "dim_res_blocks": [
+      1024,
+      256,
+      128,
+      64,
+      32
+    ],
+    "num_res_blocks": [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    "res_block_in_norm": "none",
+    "res_block_hidden_norm": "none",
+    "resamplers": [
+      "conv_transpose",
+      "conv_transpose",
+      "conv_transpose",
+      "bilinear"
+    ]
+  },
+  "mask_head": {
+    "dim_in": [
+      1024,
+      256,
+      128,
+      64,
+      32
+    ],
+    "dim_out": [
+      null,
+      null,
+      null,
+      null,
+      1
+    ],
+    "dim_res_blocks": [
+      1024,
+      256,
+      128,
+      64,
+      32
+    ],
+    "num_res_blocks": [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    "res_block_in_norm": "none",
+    "res_block_hidden_norm": "none",
+    "resamplers": [
+      "conv_transpose",
+      "conv_transpose",
+      "conv_transpose",
+      "bilinear"
+    ]
+  },
+  "remap_output": "exp",
+  "remap_depth_in": "log",
+  "num_tokens_range": [
+    1200,
+    3600
+  ]
+}

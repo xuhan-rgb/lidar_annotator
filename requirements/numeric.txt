@@ -1,0 +1,11 @@
+numpy==1.26.4
+scipy==1.13.1
+Pillow==10.4.0
+opencv-python-headless==4.11.0.86
+matplotlib==3.9.2
+plotly==6.9.0
+lmdb==2.3.0
+shapely==2.1.2
+scikit-learn==1.5.2
+threadpoolctl==3.6.0
+pytest==8.3.3

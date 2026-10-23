@@ -1,0 +1,5 @@
+{
+  "data_root": "~/.local/share/lidar_annotator/datasets",
+  "base_semantics": "~/.local/share/lidar_annotator/jobs/default/data/labels/zgc",
+  "model_cache": "~/.cache/lidar_annotator/models"
+}
